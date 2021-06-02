@@ -22,7 +22,22 @@ function appMenu() {
       type:"input",
       name : "managerName",
       message : "What is the Manager's name?",
-     },// do rest oof questions
+     },
+     {
+      type:"input",
+      id : "managerId",
+      message : "What is the Manager's ID?",
+     },
+     {
+      type:"input",
+      email : "managerEmail",
+      message : "What is the Manager's email?",
+     },
+     {
+      type:"input",
+      officeNumber : "officeNumber",
+      message : "What is the Manager's Office Number?",
+     },
     ]).then(answers => {//call back funtion  tell sme I need 4 questions.  may want to validate email
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
@@ -60,10 +75,26 @@ function appMenu() {
 
   function addEngineer() {//follow manager +library
     inquirer.prompt([
-      //ask the same stly questions
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+      {
+        type:"input",
+        name : "engineerName",
+        message : "What is the Engineer's name?",
+       },
+       {
+        type:"input",
+        id: "engineerId",
+        message : "What is the Engineer's ID?",
+       },
+       {
+        type:"input",
+        email : "engineerEmail",
+        message : "What is the Engineer's email?",
+       },
+       {
+        type:"input",
+        github : "engineerEmail",
+        message : "What is the Engineer's email?",
+       },
     ]).then(answers => {
       //
       // YOUR CODE HERE
@@ -79,10 +110,26 @@ function appMenu() {
 
   function addIntern() {
     inquirer.prompt([
-      //
-      // YOUR CODE HERE
-      // CREATE OBJECTS OF QUESTIONS FOR ENGINEER
-      //
+      {
+        type:"input",
+        name : "internName",
+        message : "What is the Intern's name?",
+      },
+      {
+        type:"input",
+        id: "internId",
+        message : "What is the Intern's ID?",
+      },
+      {
+        type:"input",
+        email : "internEmail",
+        message : "What is the Intern's email?",
+      },
+      {
+        type:"input",
+        school : "internSchool",
+        message : "What school does the Intern attend",
+      },
     ]).then(answers => {
       //
       // YOUR CODE HERE
