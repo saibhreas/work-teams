@@ -38,7 +38,7 @@ function appMenu() {
       officeNumber : "officeNumber",
       message : "What is the Manager's Office Number?",
      },
-    ]).then(answers => {//call back funtion  tell sme I need 4 questions.  may want to validate email
+    ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
       idArray.push(answers.managerId);
@@ -92,17 +92,13 @@ function appMenu() {
        },
        {
         type:"input",
-        github : "engineerEmail",
-        message : "What is the Engineer's email?",
+        github : "githubUser",
+        message : "What is the Engineer's Github Username?",
        },
     ]).then(answers => {
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE ENGINEER OBJECT INSTANTIATED WITH THE ENGINEER CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE ENGINEER CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE ENGINEER VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE ENGINERR ID TO THE idArray ARRAY
-      // 
+      const manager = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubUser);
+      teamMembers.push(engineer);
+      idArray.push(answers.engineerId);
  
       createTeam();
     });
@@ -127,17 +123,13 @@ function appMenu() {
       },
       {
         type:"input",
-        school : "internSchool",
+        school : "school",
         message : "What school does the Intern attend",
       },
     ]).then(answers => {
-      //
-      // YOUR CODE HERE
-      // 1. CREATE A VARIABLE TO STORE THE INTERN OBJECT INSTANTIATED WITH THE INTERN CLASS, PASSING ANSWERS PROPERTIES AS INPUT AURGUMENTS 
-      //    TO THE INTERN CLASS CONSTRUCTOR
-      // 2. ADD (PUSH) THE INTERN VARIABLE TO the teamMembers ARRAY
-      // 3. ADD (PUSH) THE INTERN ID TO THE idArray ARRAY
-      // 
+      const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.school);
+      teamMembers.push(intern);
+      idArray.push(answers.internId);
 
       createTeam();
     });
