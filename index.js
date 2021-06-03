@@ -77,23 +77,23 @@ function appMenu() {
     inquirer.prompt([
       {
         type:"input",
-        name : "engineerName",
+        name : "name",
         message : "What is the Engineer's name?",
        },
        {
         type:"input",
-        id: "engineerId",
+        id: id,
         message : "What is the Engineer's ID?",
        },
        {
         type:"input",
-        email : "engineerEmail",
+        email : email,
         message : "What is the Engineer's email?",
        },
        {
         type:"input",
-        github : "githubUser",
-        message : "What is the Engineer's Github Username?",
+        github : "github",
+        message : "What is the Engineer's GitHub Username?",
        },
     ]).then(answers => {
       const manager = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubUser);
@@ -108,17 +108,17 @@ function appMenu() {
     inquirer.prompt([
       {
         type:"input",
-        name : "internName",
+        name : name,
         message : "What is the Intern's name?",
       },
       {
         type:"input",
-        id: "internId",
+        id: id,
         message : "What is the Intern's ID?",
       },
       {
         type:"input",
-        email : "internEmail",
+        email : email,
         message : "What is the Intern's email?",
       },
       {
