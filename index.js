@@ -18,26 +18,27 @@ function appMenu() {
   function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
-     {
-      type:"input",
-      name : "managerName",
-      message : "What is the Manager's name?",
-     },
-     {
-      type:"input",
-      id : "managerId",
-      message : "What is the Manager's ID?",
-     },
-     {
-      type:"input",
-      email : "managerEmail",
-      message : "What is the Manager's email?",
-     },
-     {
-      type:"input",
-      officeNumber : "officeNumber",
-      message : "What is the Manager's Office Number?",
-     },
+      {
+        type: 'input',
+        name: 'managerName',
+        message: "What is the team manager's name?",
+      },
+      {
+        type: 'input',
+        name: 'managerId',
+        message: "What is the team manager's id?",
+      },
+      {
+        type: 'input',
+        name: 'managerEmail',
+        message: "What is the team manager's email?",
+      },
+      {
+        type: 'input',
+        name: 'managerOfficeNumber',
+        message: "What is the team manager's office number?",
+      },
+    
     ]).then(answers => {
       const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
       teamMembers.push(manager);
@@ -77,22 +78,22 @@ function appMenu() {
     inquirer.prompt([
       {
         type:"input",
-        name : "name",
+        name : "engineerName",
         message : "What is the Engineer's name?",
        },
        {
         type:"input",
-        id: "id",
+        id: "engineerId",
         message : "What is the Engineer's ID?",
        },
        {
         type:"input",
-        email : "email",
+        email : "engineerEmail",
         message : "What is the Engineer's email?",
        },
        {
         type:"input",
-        github : "github",
+        github : "githubUser",
         message : "What is the Engineer's GitHub Username?",
        },
     ]).then(answers => {
@@ -108,17 +109,17 @@ function appMenu() {
     inquirer.prompt([
       {
         type:"input",
-        name : "name",
+        name : "internName",
         message : "What is the Intern's name?",
       },
       {
         type:"input",
-        id: "id",
+        id: "internId",
         message : "What is the Intern's ID?",
       },
       {
         type:"input",
-        email : "email",
+        email : "internEmail",
         message : "What is the Intern's email?",
       },
       {
