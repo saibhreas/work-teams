@@ -82,12 +82,12 @@ function appMenu() {
        },
        {
         type:"input",
-        id: id,
+        id: "id",
         message : "What is the Engineer's ID?",
        },
        {
         type:"input",
-        email : email,
+        email : "email",
         message : "What is the Engineer's email?",
        },
        {
@@ -108,17 +108,17 @@ function appMenu() {
     inquirer.prompt([
       {
         type:"input",
-        name : name,
+        name : "name",
         message : "What is the Intern's name?",
       },
       {
         type:"input",
-        id: id,
+        id: "id",
         message : "What is the Intern's ID?",
       },
       {
         type:"input",
-        email : email,
+        email : "email",
         message : "What is the Intern's email?",
       },
       {
