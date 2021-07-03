@@ -148,6 +148,7 @@ function appMenu() {
         },
       ])
       .then((answers) => {
+        console.log(answers);
         const intern = new Intern(
           answers.internName,
           answers.internId,
