@@ -1,6 +1,8 @@
 
 # 10 Object-Oriented Programming: Team Profile Generator
 
+https://youtu.be/6mTPX4MozsY
+
 ## Task/Criteria
 
 Build a Node.js command-line application that: 
