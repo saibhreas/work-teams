@@ -9,12 +9,12 @@ const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-
+    //TODO write validation of questions
 const teamMembers = [];
 const idArray = [];
 
 function appMenu() {
-
+    
   function createManager() {
     console.log("Please build your team");
     inquirer.prompt([
@@ -83,26 +83,29 @@ function appMenu() {
        },
        {
         type:"input",
-        id: "engineerId",
+        name: "engineerId",
         message : "What is the Engineer's ID?",
        },
        {
         type:"input",
-        email : "engineerEmail",
+        name : "engineerEmail",
         message : "What is the Engineer's email?",
        },
        {
         type:"input",
-        github : "githubUser",
+        name: "githubUser",
         message : "What is the Engineer's GitHub Username?",
        },
+
     ]).then(answers => {
-      const manager = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubUser);
+      console.log(answers);
+      const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.githubUser);
       teamMembers.push(engineer);
       idArray.push(answers.engineerId);
  
       createTeam();
     });
+    //createTeam();
   }
 
   function addIntern() {
@@ -114,17 +117,17 @@ function appMenu() {
       },
       {
         type:"input",
-        id: "internId",
+        name: "internId",
         message : "What is the Intern's ID?",
       },
       {
         type:"input",
-        email : "internEmail",
+        name : "internEmail",
         message : "What is the Intern's email?",
       },
       {
         type:"input",
-        school : "school",
+        name: "school",
         message : "What school does the Intern attend",
       },
     ]).then(answers => {
@@ -134,6 +137,7 @@ function appMenu() {
 
       createTeam();
     });
+    //createTeam();
   }
 
   function buildTeam() {
