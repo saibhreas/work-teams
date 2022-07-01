@@ -26,9 +26,10 @@ Fulfill Assignment # 10 Rutgers Fullstack program
 
   * Demonstrate classes in jest testing. *Classes and specific properties were given by Rutgers Fullstack curriculum.*
 
-  * App must generate html file with data collected from prompts. 
-
+  * App must generate html file with data collected from prompts.  
     Html must have workable window/ links open to page generated from employee card e.g. email program opens on email address. 
+    
+    Format is a team building dashboard. 
   
   * A working Github repository must exist for task completion, with link to walk thru video.
 
@@ -37,9 +38,8 @@ Fulfill Assignment # 10 Rutgers Fullstack program
   1. [Description](#description)
   2. [Installation](#installation)
   3. [Usage](#usage)
-  4. [Contributing](#contributing)
-  5. [Technologies](#technologies)
-  6. [Questions](#questions)
+  4. [Technologies](#technologies)
+  5. [Links](#links)
   
 ## Description
 
@@ -63,7 +63,7 @@ Engineer class extends Employee:
 
 Intern class extends Employee:
   * School
-  * retruns Intern
+  * returns Intern
 
 
 
@@ -71,7 +71,30 @@ Link to video walk through:https://youtu.be/6mTPX4MozsY
 
 ## Installation
 
+Create node environment by creating work folder and create package.json.
 
+    NPM init 
+
+Add dependencies
+
+    npm install inquirer
+    npm i jest
+    //or
+    npm install --save-dev jest
+
+## Usage
+
+Free to read and fork.
+
+License: MPL 2.0
+
+## Technologies
+
+Environment  VS code
+
+Node JS: Jest  Inquirer
+
+HTML
 
 ## Links
 
